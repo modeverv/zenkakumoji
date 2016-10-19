@@ -3,6 +3,7 @@ $count = isset($_REQUEST["count"]) ? $_REQUEST["count"] : 0;
 $buf = "";
 $moji = array("１","２","３","４","５","６","７","８","９","０");
 $moji = array("あ","い","う","え","お","か","き","く","け","こ");
+$moji = array("ア","イ","ウ","エ","オ","カ","キ","ク","ケ","コ");
 $c = 0;
 function getNext(){
     global $c,$moji;
@@ -22,6 +23,11 @@ for($i=0;$i<$count;$i++){
 <meta charset="UTF-8">
 <title>全角文字列生成サービス</title>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        $("input:visible").first().focus();
+    });
+</script>    
 </head>
     <body>
     <h1>全角文字列生成サービス</h1>
